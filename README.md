@@ -1,1 +1,1 @@
-# CSCI432_robert_rules_of_order
+# CSCI432 Robert Rules of Order
