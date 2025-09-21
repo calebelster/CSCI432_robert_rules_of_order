@@ -1,0 +1,109 @@
+@import "//cdn.jsdelivr.net/npm/font-kopub@1.0";
+
+body {
+  font-family: 'KoPub Batang', Arial, sans-serif;
+  background: #AED9E0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.back-link {
+  position: absolute;
+  left: 40px;
+  top: 40px;
+  color: #222;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.login-square {
+  width: 400px;
+  height: 400px;
+  /* overflow: auto; */
+  background: #5E6472;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.login-title {
+  font-size: 30px;
+  color: #FAF3DD;
+  margin-bottom: 0;
+  text-align: left;
+  width: 90%;
+  align-self: flex-start;
+}
+
+.login-subtitle {
+  color: #FAF3DD;
+  margin-bottom: 24px;
+  font-size: 16px;
+  width: 90%;
+  text-align: left;
+  align-self: flex-start;
+}
+
+.login-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-label {
+  width: 90%;
+  text-align: left;
+  color: #FAF3DD;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.login-square input {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #d1d9e0;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.login-forgot {
+  width: 90%;
+  text-align: left;
+  color: #FAF3DD;
+  font-size: 15px;
+  margin-bottom: 16px;
+  text-decoration: underline;
+}
+
+.login-square button {
+  width: 90%;
+  padding: 10px;
+  background: black;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-signup {
+  width: 100%;
+  text-align: center;
+  color: #FAF3DD;
+  margin-top: 16px;
+  font-size: 15px;
+}
+
+.login-signup a {
+  color: #FAF3DD;
+  text-decoration: underline;
+}
