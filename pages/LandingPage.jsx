@@ -33,10 +33,10 @@ export default function LandingPage() {
                     <span className="text-lg font-bold">Robert Rules of Order</span>
                 </div>
                 <div className="space-x-4">
-                    <a href="/signin" className="text-blue-500">
+                    <a href="./pages/login/login.html" className="text-blue-500">
                         Log In
                     </a>
-                    <a href="/signup" className="text-blue-500">
+                    <a href="./pages/sign-up/sign-up.html" className="text-blue-500">
                         Sign Up
                     </a>
                 </div>
@@ -49,10 +49,10 @@ export default function LandingPage() {
                     Your gateway to awesome features. Join us or log in to get started!
                 </p>
                 <div className="mt-4 space-x-4">
-                    <a href="/signin" className="px-4 py-2 bg-blue-500 text-white rounded">
+                    <a href="./pages/login/login.html" className="px-4 py-2 bg-blue-500 text-white rounded">
                         Log In
                     </a>
-                    <a href="/signup" className="px-4 py-2 bg-green-500 text-white rounded">
+                    <a href="./pages/sign-up/sign-up.html" className="px-4 py-2 bg-green-500 text-white rounded">
                         Sign Up
                     </a>
                 </div>
