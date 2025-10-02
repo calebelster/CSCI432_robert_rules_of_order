@@ -29,7 +29,7 @@ export default function LandingPage() {
             {/* Navbar */}
             <nav className="flex justify-between items-center p-4 bg-gray-100">
                 <div className="flex items-center space-x-2">
-                    <img src="/assets/gavel_logo.png" alt="Logo" className="w-8 h-8" />
+                    <img src="/gavel_logo.png" alt="Logo" className="w-8 h-8" />
                     <span className="text-lg font-bold">Robert Rules of Order</span>
                 </div>
                 <div className="space-x-4">
