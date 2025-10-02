@@ -1,0 +1,70 @@
+@import "//cdn.jsdelivr.net/npm/font-kopub@1.0";
+
+:root {
+    --border-radius: 10px;
+    --background: #AED9E0;
+    --box-shadow: 2px 5px 10px rgba(0,0,0,0.3);
+}
+
+body {
+    margin: 0;
+    font-family: 'KoPub Batang', Arial, sans-serif;
+    background: var(--background);
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #222;
+}
+
+.motion {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: var(--box-shadow);
+}
+
+.motion h2 {
+    margin-top: 0;
+    color: #444;
+}
+
+.motion p {
+    color: #555;
+}
+
+.replies {
+    margin-top: 15px;
+    padding-left: 15px;
+    border-left: 3px solid #ccc;
+}
+
+.reply {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+input[type="text"], select {
+    margin-top: 5px;
+    padding: 5px 10px;
+    border-radius: var(--border-radius);
+    border: 1px solid #ccc;
+    width: 60%;
+}
+
+button {
+    margin-top: 5px;
+    padding: 5px 15px;
+    border-radius: var(--border-radius);
+    border: none;
+    background-color: #444;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: #222;
+}

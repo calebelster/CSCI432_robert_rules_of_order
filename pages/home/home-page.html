@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Robert Rules of Order</title>
+    <link rel="stylesheet" href="../../styles/home-page.css" />
+    <style></style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-logo">
+          <img src="../../assets/gavel_logo.png" alt="logo"/>
+          <span>Robert Rules of Order</span>
+        </div>
+        <div class="user-info"></div>
+      </header>
+
+      <main>
+        <!-- Welcome Section -->
+        <section class="welcome">
+          <h1>Welcome back!</h1>
+          <p>
+            Manage your committees and participate in proceedings
+          </p>
+        </section>
+
+        <!-- Stats Cards Grid -->
+        <section class="card-grid">
+          <!-- Cards will be rendered by JS -->
+        </section>
+
+        <!-- Your Committees Section -->
+        <section>
+          <div class="committees-header">
+            <h2>Your Committees</h2>
+            <button class="create-button">
+              Create Committee
+            </button>
+          </div>
+          <div class="committee-card-grid">
+            <!-- Committee cards will be rendered by JS -->
+          </div>
+        </section>
+      </main>
+
+      <!-- Help Icon -->
+      <div class="help-icon">
+        ?
+      </div>
+    </div>
+
+    <!-- Modal for Create Committee -->
+    <div class="modal-overlay" style="display:none;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <h3>Create New Committee</h3>
+            <p>Set up a new committee for parliamentary proceedings</p>
+          </div>
+          <button class="modal-close">
+            &times;
+          </button>
+        </div>
+        <div class="modal-form">
+          <div class="modal-form-group">
+            <label for="committee-name">Committee Name</label>
+            <input
+              type="text"
+              id="committee-name"
+              placeholder="e.g., Board of Directors"
+            />
+          </div>
+          <div class="modal-form-group">
+            <label for="committee-description">Description</label>
+            <textarea
+              id="committee-description"
+              placeholder="Brief description of the committee's purpose"
+            ></textarea>
+          </div>
+        </div>
+        <div class="modal-buttons">
+          <button class="modal-button cancel">Cancel</button>
+          <button class="modal-button create">Create Committee</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="home-page.js"></script>
+  </body>
+</html>
