@@ -1,6 +1,6 @@
 // Root-level data object
 const homeData = {
-    profile: { name: "Profile Name" },
+    profile: { name: "User Initial" },
     stats: [
         { title: "Your Committees", value: 2, description: "Active committees you're part of" },
         { title: "Pending Motions", value: 3, description: "Motions requiring your attention" },
@@ -19,7 +19,20 @@ const homeData = {
             date: "Created 1/31/2024",
             role: "Member"
         }
-    ]
+    ],
+    // Store per-committee data keyed by committee name (or use a unique ID in future)
+    committeeData: {
+        "Board of Directors": {
+            members: ["User Initial"],
+            motions: [],
+            meetings: []
+        },
+        "Budget Committee": {
+            members: ["User Initial"],
+            motions: [],
+            meetings: []
+        }
+    }
 };
 function renderProfile() {
     const userInfo = document.querySelector('.user-info');
@@ -49,26 +62,32 @@ function renderStats() {
 function renderCommittees() {
     const grid = document.querySelector('.committee-card-grid');
     grid.innerHTML = '';
-    homeData.committees.forEach(committee => {
-        const card = document.createElement('div');
-        card.className = 'committee-card';
-        card.innerHTML = `
-      <div>
-        <div class="committee-header">
-          <h3>${committee.name}</h3>
-          <span class="member-tag">${committee.role}</span>
-        </div>
-        <p class="committee-description">
-          ${committee.description}
-        </p>
-      </div>
-      <div class="committee-footer">
-        <span class="date">${committee.date}</span>
-        <button class="enter-button">Enter</button>
-      </div>
-    `;
-        grid.appendChild(card);
-    });
+        homeData.committees.forEach(committee => {
+                const card = document.createElement('div');
+                card.className = 'committee-card';
+                card.innerHTML = `
+            <div>
+                <div class="committee-header">
+                    <h3>${committee.name}</h3>
+                    <span class="member-tag">${committee.role}</span>
+                </div>
+                <p class="committee-description">
+                    ${committee.description}
+                </p>
+            </div>
+            <div class="committee-footer">
+                <span class="date">${committee.date}</span>
+                <button class="enter-button">Enter</button>
+            </div>
+        `;
+                // Add event listener to Enter button
+                card.querySelector('.enter-button').addEventListener('click', () => {
+                        // Encode committee name for URL
+                        const committeeName = encodeURIComponent(committee.name);
+                        window.location.href = `committee.html?name=${committeeName}`;
+                });
+                grid.appendChild(card);
+        });
 }
 
 // Modal logic
@@ -108,6 +127,14 @@ function setupModal() {
                 date: `Created ${new Date().toLocaleDateString()}`,
                 role: "Member"
             });
+            // Initialize per-committee data if not already present
+            if (!homeData.committeeData[name]) {
+                homeData.committeeData[name] = {
+                    members: [homeData.profile.name],
+                    motions: [],
+                    meetings: []
+                };
+            }
             renderCommittees();
             modalOverlay.style.display = "none";
             document.getElementById("committee-name").value = '';
