@@ -93,7 +93,7 @@ function renderMotionsList(listEl, motions, filter) {
       // Save motion data to sessionStorage for retrieval in motions.html
       sessionStorage.setItem('motion_' + motion.id, JSON.stringify(motion));
       // Link to motions.html with id
-      window.location.href = `motions.html?id=${motion.id}`;
+      window.location.href = `../home/motions.html?id=${motion.id}`;
     });
     listEl.appendChild(card);
   });
