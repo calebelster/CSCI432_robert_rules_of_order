@@ -15,16 +15,16 @@ function LandingPage() {
                     <span className="site-title">Robert Rules of Order</span>
                 </div>
                 <div className="navbar-right">
-                    <a href="/signin" className="nav-btn">Log In</a>
-                    <a href="/signup" className="nav-btn">Sign Up</a>
+                    <Link to="/login" className="nav-btn">Log In</Link>
+                    <Link to="/signup" className="nav-btn">Sign Up</Link>
                 </div>
             </nav>
             <main className="main-content">
                 <h1 className="main-title">Welcome to MySite</h1>
                 <p className="main-desc">Your gateway to awesome features. Join us or log in to get started!</p>
                 <div className="main-buttons">
-                    <a href="/signin" className="main-btn">Log In</a>
-                    <a href="/signup" className="main-btn">Sign Up</a>
+                    <Link to="/login" className="main-btn">Log In</Link>
+                    <Link to="/signup" className="main-btn">Sign Up</Link>
                 </div>
             </main>
             <div className="info-grid">
