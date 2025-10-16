@@ -28,7 +28,19 @@ const homeData = {
             date: "Created 1/31/2024",
             role: "Member"
         }
-    ]
+    ],
+    committeeData: {
+        "Board of directors": {
+            members: ["User Initial"],
+            motions: [],
+            meetings: []
+        },
+        "Budget Committee": {
+            members: ["User Initial"],
+            motions: [],
+            meetings: []
+        }
+    }
 };
 function renderProfile() {
     const userInfo = document.querySelector('.user-info');
@@ -76,6 +88,10 @@ function renderCommittees() {
         <button class="enter-button">Enter</button>
       </div>
     `;
+        card.querySelector('.enter-button').addEventListener('click', () => {
+            const committeeName = encodeURIComponent(committee.name);
+            window.location.href = `../committee/committee.html?name=${committeeName}`;
+        });
         grid.appendChild(card);
     });
 }
@@ -117,6 +133,13 @@ function setupModal() {
                 date: `Created ${new Date().toLocaleDateString()}`,
                 role: "Member"
             });
+            if (!homeData.committeeData[name]) {
+                homeData.committeeData[name] = {
+                    members: [homeData.profile.name],
+                    motions: [],
+                    meetings: []
+                };
+            }
             renderCommittees();
             modalOverlay.style.display = "none";
             document.getElementById("committee-name").value = '';
