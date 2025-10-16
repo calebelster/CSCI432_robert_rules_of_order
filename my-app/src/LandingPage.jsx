@@ -35,9 +35,6 @@ function LandingPage() {
                 <div className="info-box">Box 5</div>
                 <div className="info-box">Box 6</div>
             </div>
-            <footer className="footer">
-                <p>&copy; 2024 MySite. All rights reserved.</p>
-            </footer>
         </>
     );
 }
