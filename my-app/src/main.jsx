@@ -4,8 +4,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom' // Import router
 
 // Import all your page components
 import LandingPage from './LandingPage.jsx'
-import SignIn from './Login.jsx'
-import SignUp from './SignUp.jsx'
+import LoginPage from './Login.jsx'
+import SignUpPage from './SignUp.jsx'
 import './index.css' // Global styles if any
 
 ReactDOM.createRoot(document.getElementById('app')).render(
@@ -16,8 +16,9 @@ ReactDOM.createRoot(document.getElementById('app')).render(
             <Routes>
                 {/* 3. Define the path for each component */}
                 <Route path="/" element={<LandingPage />} />
-                <Route path="/signin" element={<SignIn />} />
-                <Route path="/signup" element={<SignUp />} />
+                <Route path="/home" element={<LandingPage />} />
+                <Route path="/login" element={<LoginPage />} />
+                <Route path="/signup" element={<SignUpPage />} />
                 <Route path="*" element={<div>404 Not Found</div>} />
             </Routes>
         </BrowserRouter>
