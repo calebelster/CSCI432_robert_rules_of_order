@@ -1,1 +1,2 @@
 # CSCI432 Robert Rules of Order
+[![Netlify Status](https://api.netlify.com/api/v1/badges/483bc828-d621-4414-a912-26e42866b888/deploy-status)](https://app.netlify.com/projects/resilient-cucurucho-02f74b/deploys)
