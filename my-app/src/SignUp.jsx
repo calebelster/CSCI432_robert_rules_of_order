@@ -46,7 +46,7 @@ function SignUpPage() {
     };
 
     return (
-        <>
+        <div className="signup-page">
             <div className="box">
                 <h1>Create Account</h1>
                 <p>Join to start managing your meets and committees</p>
@@ -89,7 +89,7 @@ function SignUpPage() {
                     </div>
                 </div>
             )}
-        </>
+        </div>
     );
 }
 
