@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import './LoginPage.css'; 
+import './LoginPage.css';
 
 function LoginPage() {
     // 2. Use state to manage form inputs
@@ -30,7 +30,7 @@ function LoginPage() {
     // 4. Return the HTML structure as JSX
     return (
         <div className="login-box">
-            <Link to="/" className="back-link">&#8592; Back to Home</Link>
+            <Link to="/landing" className="back-link">&#8592; Back to Home</Link>
             <div className="login-title">Log In</div>
             <div className="login-subtitle">Enter your email and password</div>
             <div className="login-content">
